@@ -1,0 +1,10 @@
+name = "Gmsh_SDK_jll"
+uuid = "4abbd9bc-5e42-58f8-a031-9aef3230cdd8"
+version = "4.5.6+0"
+
+[deps]
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+
+[compat]
+julia = "1.0"
