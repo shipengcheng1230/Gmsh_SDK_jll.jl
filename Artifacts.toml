@@ -1,25 +1,25 @@
 [[Gmsh_SDK]]
 arch = "x86_64"
-git-tree-sha1 = "200b6b1475f3ec4c69f7f088d99adc96c6889635"
-os = "windows"
+git-tree-sha1 = "cf8d39eb4db785726c3fd00d24bf53747b7c730b"
+os = "macos"
 
     [[Gmsh_SDK.download]]
-    sha256 = "b615d23bfc9f135f01dabb5463b8f2d8c8b01a7d03e05f82eb92a77ddb8e6604"
-    url = "https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/releases/download/Gmsh_SDK-v4.5.6+0/Gmsh_SDK.v4.5.6.x86_64-w64-mingw32.tar.gz"
+    sha256 = "a6c49b5bd2fffa1d1f889a0791e91be93cfbacac65f3e1226905c8ca9ea007a0"
+    url = "https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/releases/download/Gmsh_SDK-v4.6.0+0/Gmsh_SDK.v4.6.0.x86_64-apple-darwin14.tar.gz"
 [[Gmsh_SDK]]
 arch = "x86_64"
-git-tree-sha1 = "1a1885c6eac4aa665a6a64c06528c1696ea49be7"
+git-tree-sha1 = "536cc7f40eb512f33182664e5ef604c1bce2cd0e"
 libc = "glibc"
 os = "linux"
 
     [[Gmsh_SDK.download]]
-    sha256 = "a783417b245636fc1788e0a233a61a11ee4265264114725413b21dc924e48162"
-    url = "https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/releases/download/Gmsh_SDK-v4.5.6+0/Gmsh_SDK.v4.5.6.x86_64-linux-gnu.tar.gz"
+    sha256 = "2c554a4afc4841853b6e9dbe1d255c890bbf809f059d387a119f9e3b520bf719"
+    url = "https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/releases/download/Gmsh_SDK-v4.6.0+0/Gmsh_SDK.v4.6.0.x86_64-linux-gnu.tar.gz"
 [[Gmsh_SDK]]
 arch = "x86_64"
-git-tree-sha1 = "c9d5d36f915c0d8aaf0995f930d3bcc98602acdd"
-os = "macos"
+git-tree-sha1 = "09142e3056b4a2e99da4c2d26dc9ab38948faf0c"
+os = "windows"
 
     [[Gmsh_SDK.download]]
-    sha256 = "d84ad5800e40d5717c3214e84627024b2d55c3ec7f0625e96942064aae543806"
-    url = "https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/releases/download/Gmsh_SDK-v4.5.6+0/Gmsh_SDK.v4.5.6.x86_64-apple-darwin14.tar.gz"
+    sha256 = "ac1c21a0f3ff8c83e368ae94f7cf41570dff7946e083f0a3ed5e42b962515fed"
+    url = "https://github.com/shipengcheng1230/Gmsh_SDK_jll.jl/releases/download/Gmsh_SDK-v4.6.0+0/Gmsh_SDK.v4.6.0.x86_64-w64-mingw32.tar.gz"

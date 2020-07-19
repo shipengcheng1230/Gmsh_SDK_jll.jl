@@ -5,9 +5,10 @@ export libgmsh
 PATH = ""
 LIBPATH = ""
 LIBPATH_env = "DYLD_FALLBACK_LIBRARY_PATH"
+LIBPATH_default = "~/lib:/usr/local/lib:/lib:/usr/lib"
 
 # Relative path to `libgmsh`
-const libgmsh_splitpath = ["lib", "libgmsh.4.5.dylib"]
+const libgmsh_splitpath = ["lib", "libgmsh.4.6.dylib"]
 
 # This will be filled out by __init__() for all products, as it must be done at runtime
 libgmsh_path = ""
@@ -17,7 +18,7 @@ libgmsh_path = ""
 libgmsh_handle = C_NULL
 
 # This must be `const` so that we can use it with `ccall()`
-const libgmsh = "@rpath/libgmsh.4.5.dylib"
+const libgmsh = "@rpath/libgmsh.4.6.dylib"
 
 
 """
@@ -28,8 +29,6 @@ function __init__()
 
     # Initialize PATH and LIBPATH environment variable listings
     global PATH_list, LIBPATH_list
-    # We first need to add to LIBPATH_list the libraries provided by Julia
-    append!(LIBPATH_list, [joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)])
     global libgmsh_path = normpath(joinpath(artifact_dir, libgmsh_splitpath...))
 
     # Manually `dlopen()` this right now so that future invocations
@@ -41,12 +40,6 @@ function __init__()
     filter!(!isempty, unique!(PATH_list))
     filter!(!isempty, unique!(LIBPATH_list))
     global PATH = join(PATH_list, ':')
-    global LIBPATH = join(LIBPATH_list, ':')
-
-    # Add each element of LIBPATH to our DL_LOAD_PATH (necessary on platforms
-    # that don't honor our "already opened" trick)
-    #for lp in LIBPATH_list
-    #    push!(DL_LOAD_PATH, lp)
-    #end
+    global LIBPATH = join(vcat(LIBPATH_list, [joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)]), ':')
 end  # __init__()
 
